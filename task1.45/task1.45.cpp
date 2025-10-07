@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 int main() {
     int num1;
@@ -18,6 +19,9 @@ int main() {
     int proiz = num1 * num2;
     std::cout << "Произведение чисел: " << proiz << std::endl;
 
+    int rounded = 2;
     double chast = num1 / num2;
-    std::cout << "Частное чисел: " << chast << std::endl;
+    std::cout << std::fixed << "Частное чисел: " << std::setprecision(rounded) << chast << std::endl;
+
+    return(0);
 }
