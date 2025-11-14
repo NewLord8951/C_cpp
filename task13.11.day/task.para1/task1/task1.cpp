@@ -30,6 +30,5 @@ int main() {
 
     cout << min << " " << index1 + 1 << endl;
     cout << max << " " << index2 + 1 << endl;
-
     return 0;
 }
