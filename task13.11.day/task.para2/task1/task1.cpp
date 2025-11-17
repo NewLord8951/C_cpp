@@ -1,41 +1,49 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <locale.h>
 #include <ctime>
-
+#include <cstdlib>
+#include <algorithm>
+#include <vector>
+#include <functional>
 using namespace std;
-int main()
-{
-    setlocale(LC_ALL, "rus"); srand(time(NULL));
 
-    cout << "Введите кол-во элементов: ";
-    int n = 0; cin >> n; vector<int> arr(n); vector<int> sortirovka(n);
-    for (int i = 0; i < n; i++) arr[i] = rand() % 50 + 1;
+int main() {
+    vector<int> num(10);
+    vector<int> ninum;
+    vector<int> plnum;
+    srand(time(NULL));
 
-    cout << "Ваш массив: ";
-    for (auto elem : arr) cout << elem << " ";
+    for(int i = 0; i < 10; i++) {
+        num[i] = rand() % 50 + 1;
+    }
 
-    sort(arr.begin(), arr.end()); int i = 0;
+    cout << "Первый массив: ";
+    for(int a = 0; a < 10; a++) {
+        cout << num[a] << " ";
+    }
+    cout << endl;
 
-    for (auto elem : arr) {
-        if (elem % 2 == 0) { 
-            sortirovka[i] = elem; 
-            i++;
+    sort(num.begin(), num.end());
+
+    for(int val : num) {
+        if(val % 2 != 0) {
+            ninum.push_back(val);
+        } else {
+            plnum.push_back(val);
         }
     }
 
-    sort(arr.rbegin(), arr.rend());
+    
+    sort(ninum.rbegin(), ninum.rend());
 
-    for (auto elem : arr) {
-        if (elem % 2 != 0) {
-            sortirovka[i] = elem;
-            i++;
-        }
+    cout << "Второй массив (отсортированный): ";
+
+    for(auto c : plnum) {
+        cout << c << " " << endl;
+    }
+    for(auto s : ninum) {
+        cout << s << " " << endl;
     }
 
-    cout << endl << "Ваш сортированный массив: ";
-    for (auto elem : sortirovka)cout << elem << " ";
 
     return 0;
 }
