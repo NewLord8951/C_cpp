@@ -6,9 +6,8 @@ using namespace std;
 int main() {
     int num[15];
     srand(time(NULL));
-    int h = 0;
     for(int i = 0; i < 15; i++) {
-        num[i] = rand() % 100 + 1;
+        num[i] = rand() %  + 1;
     }
 
     for(int j = 0; j < 15; j++) {
