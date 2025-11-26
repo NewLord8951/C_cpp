@@ -8,7 +8,7 @@ int main() {
     srand(time(NULL));
     for(int i = 0; i != 5; i++) {
         for(int j = 0; j != 5; j++) {
-            arr[i][j] = rand() % 10 + 1;
+            arr[i][j] = rand() % 100 + 1;
         }
     }
 
