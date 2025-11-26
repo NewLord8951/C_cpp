@@ -2,11 +2,12 @@
 #include <vector>
 #include <algorithm>
 #include <ctime>
+#include <cstdlib> 
 using namespace std;
 
 int main() {
     vector<int> h;
-    vector<int> q;
+
     srand(time(NULL));
 
     for(int i = 0; i != 15; i++) {
@@ -17,10 +18,10 @@ int main() {
         cout << "Вектор: " << h[i] << endl;
     }
 
+    cout << " " << endl;
     for(int i = 0; i != 15; i++) {
-        if(i % 3 == 0) {
-            h.erase(h.begin() + i);
-            
+        if (h[i] % 3 == 0) {
+            h[i] = 0;
         }
     }
 
