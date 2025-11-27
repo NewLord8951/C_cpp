@@ -1,13 +1,10 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-bool calculatesquare(int num) {
-    if(num > 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
+int calculatesquare(int num) {
+    int sqr = pow(num, 2);
+    return sqr;
 }
 
 int main() {
