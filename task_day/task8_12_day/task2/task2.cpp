@@ -2,14 +2,14 @@
 #include <string>
 using namespace std;
 
-struct book {
+struct student {
     string title;
     string author;
     int year;
     int pages;
 };
 
-void printbookinfo(book books[], int size) {
+void calculateaverage(student books[], int size) {
     for (int i = 0; i < size; i++) {
         cout << "Книга " << i + 1 << ":\n";
         cout << "  Название: " << books[i].title << "\n";
@@ -20,7 +20,7 @@ void printbookinfo(book books[], int size) {
 }
 
 int main() {
-    book books[5] = {
+    student books[5] = {
         {"Преступление и наказание", "Ф. М. Достоевский", 1866, 670},
         {"Анна Каренина", "Л. Н. Толстой", 1877, 864},
         {"Маленький принц", "Антуан де Сент-Экзюпери", 1943, 96},
@@ -28,7 +28,7 @@ int main() {
         {"1984", "Джордж Оруэлл", 1949, 328}
     };
 
-    printbookinfo(books, 5);
+    calculateaverage(books, 5);
 
     return 0;
 }
