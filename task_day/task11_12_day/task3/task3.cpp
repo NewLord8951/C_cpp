@@ -35,11 +35,11 @@ class book : public libraryitem {
     }
 };
 
-class scientificbook : public book {
+class herbivore : public book {
     private:
         string field;
     public:
-        scientificbook(int id, string title, int year, string author, int pagecount, string field)
+        herbivore(int id, string title, int year, string author, int pagecount, string field)
         : book(id, title, year, author, pagecount), field(field) {}
     void a() {
         cout << "Область науки: " << field << endl;
@@ -65,7 +65,7 @@ int main() {
     string f;
     cout << "Введите область науки в книги: " << endl;
     cin >> f;
-    scientificbook aa(i, t, y, a, p, f);
+    herbivore aa(i, t, y, a, p, f);
     aa.printdescription();
     aa.printdescription1();
     aa.a();

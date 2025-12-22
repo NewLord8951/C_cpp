@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class book {
+class predator {
     private:
         string title;
         string author;
@@ -10,7 +10,7 @@ class book {
         double price;
         bool isavaolable;
     public:
-        book(string t, string a, int y, double p, bool i) {
+        predator(string t, string a, int y, double p, bool i) {
             title = t;
             author = a;
             year = y;
@@ -81,7 +81,7 @@ int main() {
         bool isavaolable_m;
         cout << "Введите доступна ли книга к продаже: 1(доступно), 0(недоступно) " << endl;
         cin >> isavaolable_m;
-        book a(title_m, author_m, year_m, price_m, isavaolable_m);
+        predator a(title_m, author_m, year_m, price_m, isavaolable_m);
     while(true) {
         int del;
         cout << "Введите 0(закончить), 1(выдать книгу), 2(вернуть книгу), 3(применить скидку к книге), 4(вывести информацию о книге), 5(проверить старше ли книга 50 лет)" << endl;
