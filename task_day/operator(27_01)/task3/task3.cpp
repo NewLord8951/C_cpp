@@ -7,9 +7,9 @@ class Fraction{
   public:
     Fraction(int x = 0, int y = 1){} 
     void read(){char s;  cin >> x >> s >> y;}   
-    Fraction operator - (Fraction &b) {
-      x = x * b.y - b.x * y;
-      y = y * b.y;
+    Fraction operator * (Fraction &b) {
+      x = x * b.y;
+      y = y * b.x;
       return *this;
     } 
   void show() {
@@ -23,6 +23,6 @@ class Fraction{
 int main(){
     Fraction a, b, c;
     a.read();  b.read();
-    c = a - b;  c.show();
+    c = a * b;  c.show();
     return 0;
 }
