@@ -3,9 +3,9 @@
 using namespace std;
 
 class point{
-    friend void distance(point b) {
-        double a = pow((b.x * b.x) + (b.y * b.y), 0.5);
-        cout << a << endl;
+    friend void distance(point b, point a) {
+        double c = pow(((a.x - b.x) * (a.x - b.x)) + (a.y - b.y) * (a.y - b.y), 0.5);
+        cout << c << endl;
     }
     private:
         int x;
@@ -26,9 +26,11 @@ class point{
 };
 
 int main() {
-    point q;
+    point q, e;
+    e.vvod();
+    e.vyvod();
     q.vvod();
     q.vyvod();
-    distance(q);
+    distance(q, e);
     return 0;
 }
