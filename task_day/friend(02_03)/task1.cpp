@@ -5,6 +5,7 @@ using namespace std;
 class point{
     friend void distance(point b) {
         double a = pow((b.x * b.x) + (b.y * b.y), 0.5);
+        cout << a << endl;
     }
     private:
         int x;
@@ -28,5 +29,6 @@ int main() {
     point q;
     q.vvod();
     q.vyvod();
+    distance(q);
     return 0;
 }
