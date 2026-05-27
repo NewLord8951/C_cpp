@@ -13,15 +13,15 @@ class hihihiha {
             this->matrix = matrix;
         }
         void vvod() {
-            matrix.resize(200, vector<int>(200));
-            for(int i = 0; i < 200; i++) {
-                for(int j = 0; j < 200; j++) {
+            matrix.resize(221, vector<int>(221));
+            for(int i = 0; i < 221; i++) {
+                for(int j = 0; j < 221; j++) {
                     matrix[i][j] = rand() % 9;
                 }
             }
             const string GREEN = "\033[32m";
-            for(int k = 0; k < 200; k++) {
-                for(int q = 0; q < 200; q++) {
+            for(int k = 0; k < 221; k++) {
+                for(int q = 0; q < 221; q++) {
                     
                     cout << GREEN << matrix[k][q] << " ";
                 }
@@ -38,7 +38,7 @@ int main() {
     while(true) {
         a.vvod();
         w++;
-        if(w == 10) {
+        if(w == 3) {
             break;
         }
     }
